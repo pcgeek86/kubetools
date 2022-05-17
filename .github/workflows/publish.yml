@@ -12,4 +12,5 @@ jobs:
       shell: pwsh
       run: |
         $ExcludeList = @('README.md', 'publish.yml')
-        Publish-Module -Path ${{ github.workspace }} -NuGetApiKey ${{ secrets.POWERSHELL_GALLERY_APIKEY }} -Exclude $ExcludeList
+        Import-Module -Name kubetools.psd1
+        Publish-Module -Name kubetools -NuGetApiKey ${{ secrets.POWERSHELL_GALLERY_APIKEY }} -Exclude $ExcludeList
