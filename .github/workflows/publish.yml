@@ -1,3 +1,13 @@
+on: [workflow_dispatch]
+name: Publish PowerShell Module
 
 jobs:
-  
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - id: publish-module
+      name: Publish Module
+      shell: pwsh
+      run: |
+        $ExcludeList = @('README.md', 'publish.yml')
+        Publish-Module -Path ${{ github.workspace }} -NuGetApiKey ${{ secrets.POWERSHELL_GALLERY_APIKEY }} -Exclude 
