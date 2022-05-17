@@ -2,7 +2,7 @@
   RootModule = 'kubetools.psm1'
   Author = 'Trevor Sullivan <trevor@trevorsullivan.net>'
   CompanyName = 'Trevor Sullivan'
-  ModuleVersion = '0.1'
+  ModuleVersion = '0.2'
   GUID = '0f5ef264-e8d2-4483-9d7a-e3cc978b621a'
   Copyright = '2022 Trevor Sullivan'
   Description = 'A PowerShell module with useful functions for Kubernetes cluster management.'
