@@ -67,3 +67,5 @@ Register-ArgumentCompleter -CommandName Start-KubernetesPortForward -ParameterNa
 }
 
 New-Alias -Name kpf -Value Start-KubernetesPortForward -Description 'Initiates Kubernetes port forwarding against a Pod, Deployment, Service, etc.'
+
+Export-ModuleMember -Function * -Alias *
