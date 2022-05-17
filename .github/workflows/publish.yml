@@ -1,4 +1,6 @@
-on: [workflow_dispatch]
+on:
+- workflow_dispatch
+- push
 name: Publish PowerShell Module
 
 jobs:
