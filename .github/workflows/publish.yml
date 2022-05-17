@@ -10,4 +10,4 @@ jobs:
       shell: pwsh
       run: |
         $ExcludeList = @('README.md', 'publish.yml')
-        Publish-Module -Path ${{ github.workspace }} -NuGetApiKey ${{ secrets.POWERSHELL_GALLERY_APIKEY }} -Exclude 
+        Publish-Module -Path ${{ github.workspace }} -NuGetApiKey ${{ secrets.POWERSHELL_GALLERY_APIKEY }} -Exclude $ExcludeList
