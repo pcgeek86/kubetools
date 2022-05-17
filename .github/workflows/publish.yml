@@ -14,7 +14,7 @@ jobs:
       name: Publish Module
       shell: pwsh
       run: |
+        mkdir kubetools
+        Move-Item -Path kubetools.psd1,kubetools.psm1 -Destination kubetools
         Get-ChildItem
-        $ExcludeList = @('README.md', 'publish.yml')
-        Import-Module -Name ${{ github.workspace}}/kubetools.psd1
-        Publish-Module -Name kubetools -NuGetApiKey ${{ secrets.POWERSHELL_GALLERY_APIKEY }} -Exclude $ExcludeList
+        Publish-Module -Path ./kubetools/ -NuGetApiKey ${{ secrets.POWERSHELL_GALLERY_APIKEY }}
